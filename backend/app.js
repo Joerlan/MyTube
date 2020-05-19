@@ -1,5 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const Post = require('./model/post');
+
+
+mongoose.connect('mongodb+srv://joerlan:dCAMjsTRQ1xWys7d@cluster0-gj1yn.mongodb.net/mytube?retryWrites=true&w=majority')
+  .then(()=>{
+    console.log('MongoDB Connected!');
+  })
+  .catch(()=>{
+    console.log("Conection MongoDB Fail!");
+});
 
 const app = express();
 
@@ -19,30 +30,32 @@ app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/api/posts',(req, res, next)=> {
-  const post = req.body;
-  console.log(post);
-  res.status(201).json({
-    message: "Added!"
+  const post = new Post({
+    title: req.body.title,
+    content: req.body.content
+  });
+  //console.log(post);
+  post.save().then(result => {
+    res.status(201).json({
+      message: "Added!",
+      postId: result._id
+    });
   });
 });
 
-app.use('/api/posts',(req, res, next)=> {
-  const posts = [
-    {
-      id: "1",
-      title: 'Post 1',
-      content: 'content 1'
-    },
-    {
-      id: "2",
-      title: 'Post 2',
-      content: 'content 2'
-    }
-  ]
-  res.json({
-    message: "Fetch Posts success!",
-    posts: posts
+app.get('/api/posts',(req, res, next)=> {
+  Post.find().then(documents =>{
+    res.json({
+      message: "Fetch Posts success!",
+      posts: documents
+    });
   });
 });
 
+app.delete('/api/posts/:id',(req, res, next)=> {
+  Post.deleteOne({_id: req.params.id}).then((result)=>{
+    console.log(result);
+    res.status(200).json({message: "Post Deleted"})
+  })
+});
 module.exports = app;

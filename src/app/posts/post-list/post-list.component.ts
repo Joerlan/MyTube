@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
 import { Subscription } from 'rxjs';
@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css']
 })
-export class PostListComponent implements OnInit {
+export class PostListComponent implements OnInit, OnDestroy {
 
   // posts = [
   //   {title: "title1", content: "content1"},
@@ -29,4 +29,11 @@ export class PostListComponent implements OnInit {
     });
   }
 
+  onDeletePost(postId: string){
+    this.postService.deletePost(postId);
+  }
+
+  ngOnDestroy(){
+    this.postsSub.unsubscribe();
+  }
 }

@@ -1,8 +1,13 @@
 <mat-toolbar color="primary">
-  <span routerLink="/">ToolBar</span>
-  <ul>
-    <li>
-      <a routerLink="/create">Add a new Post</a>
-    </li>
-  </ul>
+  <span >
+    <a routerLink="/">List</a>
+  </span>
+  <span class="spacer"></span>
+    <ul>
+      <li>
+        <a mat-button
+        routerLink="/create"
+        routerLinkActive="mat-accent">Add a new Post</a>
+      </li>
+    </ul>
 </mat-toolbar>

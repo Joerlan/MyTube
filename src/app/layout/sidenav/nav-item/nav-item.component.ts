@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NavItem } from './nav-item.model';
 
 @Component({
   selector: 'app-nav-item',
@@ -7,16 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavItemComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() displaySimple: boolean;
-  @Input() icon: string;
+  @Input() navItem: NavItem;
 
   constructor() { }
 
   ngOnInit() {
-    this.title = this.title || "Empty Title";
-    this.displaySimple = this.displaySimple || false;
-    this.icon = this.icon || "no_icon_path";
   }
 
 }

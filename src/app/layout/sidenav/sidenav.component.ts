@@ -1,5 +1,7 @@
 import { NavItemComponent } from './nav-item/nav-item.component';
 import { Component, OnInit } from '@angular/core';
+import { itens } from './sidenav.config';
+import { NavItem } from './nav-item/nav-item.model';
 
 @Component({
   selector: 'app-sidenav',
@@ -11,7 +13,7 @@ export class SidenavComponent implements OnInit {
   events: string[] = [];
   opened: boolean = true;
   navWidth: string = "240px";
-  itens: [];
+  itens: NavItem[] = itens;
 
 
   constructor() { }

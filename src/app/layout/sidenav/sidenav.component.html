@@ -1,5 +1,3 @@
 <div id="mySidenav" class="sidenav" [style.width]="navWidth" >
-
-<app-nav-item></app-nav-item>
-
+  <app-nav-item [navItem]="item" *ngFor="let item of itens"></app-nav-item>
 </div>

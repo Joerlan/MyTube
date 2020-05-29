@@ -1,0 +1,24 @@
+#header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2020;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+#content {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+#sidenav-container {
+  margin-top: 56px;
+}
+
+#main-container {
+  margin-top: 56px;
+  /* transition: 0.5s; */
+}

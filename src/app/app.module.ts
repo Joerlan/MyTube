@@ -1,3 +1,4 @@
+import { LayoutModule } from './layout/layout.module';
 import { AngularMaterialModule } from './angular-material.module';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,7 +7,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostModule } from './posts/post.module';
 
@@ -14,7 +14,6 @@ import { PostModule } from './posts/post.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +21,8 @@ import { PostModule } from './posts/post.module';
     BrowserAnimationsModule,
     AngularMaterialModule,
     HttpClientModule,
-    PostModule
+    PostModule,
+    LayoutModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]

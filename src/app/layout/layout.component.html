@@ -1,8 +1,14 @@
 <div id="content">
   <div id="header-container" >
     <app-header >
-      <button  (click)="sidenav.toggle()">AAA</button>
-    </app-header>
+      <div id="toolbar-start" >
+        <app-header-icon-button  ></app-header-icon-button>
+        <app-logo-icon></app-logo-icon>
+
+      </div>
+      <div id="toolbar-center" ></div>
+      <div id="toolbar-end" ></div>
+      </app-header>
   </div>
   <div id="sidenav-container" >
     <app-sidenav #sidenav ></app-sidenav>

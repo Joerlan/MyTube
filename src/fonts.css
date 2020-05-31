@@ -1,0 +1,13 @@
+/* anton-regular - latin */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/anton/anton-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Anton Regular'), local('Anton-Regular'),
+       url('assets/fonts/anton/anton-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('assets/fonts/anton/anton-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('assets/fonts/anton/anton-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('assets/fonts/anton/anton-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('assets/fonts/anton/anton-v11-latin-regular.svg#Anton') format('svg'); /* Legacy iOS */
+}

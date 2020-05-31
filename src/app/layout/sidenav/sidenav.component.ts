@@ -1,7 +1,6 @@
-import { NavItemComponent } from './nav-item/nav-item.component';
+import { NavSection } from './nav-section/nav-section.model';
 import { Component, OnInit } from '@angular/core';
-import { itens } from './sidenav.config';
-import { NavItem } from './nav-item/nav-item.model';
+import { sections } from './sidenav.config';
 
 @Component({
   selector: 'app-sidenav',
@@ -13,12 +12,12 @@ export class SidenavComponent implements OnInit {
   events: string[] = [];
   opened: boolean = true;
   navWidth: string = "240px";
-  itens: NavItem[] = itens;
-
+  sections: NavSection[];
 
   constructor() { }
 
   ngOnInit() {
+    this.sections = sections;
     this.opened = true;
   }
 

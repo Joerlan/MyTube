@@ -31,13 +31,13 @@ export class PostsService {
                 imagePath: post.imagePath
               };
             }),
-            count: postData.count
+            countA: postData.count
           }
         })
       )
       .subscribe(transformedData => {
         this.posts = transformedData.posts;
-        this.postsUpdated.next({posts: [...this.posts], count: transformedData.count});
+        this.postsUpdated.next({posts: [...this.posts], count: transformedData.countA});
       });
   }
 

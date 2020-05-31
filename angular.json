@@ -21,11 +21,13 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/assets/svg/mytube-logo.svg",
               "src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/fonts.css"
             ],
             "scripts": []
           },

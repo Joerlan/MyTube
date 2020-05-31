@@ -1,0 +1,19 @@
+:host {
+  width: 129px;
+  height: 24px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+#country-code {
+  color: #606060;
+  margin: 0 0 0 2px;
+  font-size: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  line-height: initial;
+  font-weight: 400;
+}

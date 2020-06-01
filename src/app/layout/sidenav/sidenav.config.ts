@@ -11,13 +11,13 @@ const mainItens: NavItem[] = [
     },
     {
       name: "Trending",
-      iconName: "hot-fire",
+      iconName: "fire",
       hasSimpleDisplay: true,
       route: "/trend"
     },
     {
       name: "Subscriptions",
-      iconName: "hot-fire",
+      iconName: "subscription",
       hasSimpleDisplay: true,
       route: "/sub"
     },
@@ -26,34 +26,88 @@ const mainItens: NavItem[] = [
 const accountItens: NavItem[] = [
   {
     name: "Library",
-    iconName: "",
+    iconName: "library",
     hasSimpleDisplay: false,
     route: "/"
   },
   {
     name: "History",
-    iconName: "",
+    iconName: "history",
     hasSimpleDisplay: false,
     route: "/"
   },
   {
     name: "Your videos",
-    iconName: "",
+    iconName: "your-videos",
     hasSimpleDisplay: false,
     route: "/"
   },
   {
     name: "Watch later",
-    iconName: "",
+    iconName: "clock",
     hasSimpleDisplay: false,
     route: "/"
   },
   {
     name: "Liked videos",
-    iconName: "",
+    iconName: "like",
     hasSimpleDisplay: false,
     route: "/"
   },
+]
+
+const moreItens: NavItem[] = [
+  {
+    name: "YouTube Premium",
+    iconName: "yt-icon",
+    hasSimpleDisplay: false,
+    route: "/"
+  },
+  {
+    name: "YouTube Movies",
+    iconName: "movie",
+    hasSimpleDisplay: false,
+    route: "/"
+  },
+  {
+    name: "Gaming",
+    iconName: "gaming",
+    hasSimpleDisplay: false,
+    route: "/"
+  },
+  {
+    name: "Live",
+    iconName: "live",
+    hasSimpleDisplay: false,
+    route: "/"
+  }
+]
+
+const siteItens: NavItem[] = [
+  {
+    name: "Settings",
+    iconName: "settings",
+    hasSimpleDisplay: false,
+    route: "/"
+  },
+  {
+    name: "Report history",
+    iconName: "report",
+    hasSimpleDisplay: false,
+    route: "/"
+  },
+  {
+    name: "Help",
+    iconName: "help",
+    hasSimpleDisplay: false,
+    route: "/"
+  },
+  {
+    name: "Send feedback",
+    iconName: "feedback",
+    hasSimpleDisplay: false,
+    route: "/"
+  }
 ]
 
 const sections: NavSection[] = [
@@ -76,11 +130,11 @@ const sections: NavSection[] = [
   {
     name: 'more',
     title: 'MORE FROM MYTUBE',
-    fixedItens: [],
+    fixedItens: moreItens,
   },
   {
     name: 'site',
-    fixedItens: [],
+    fixedItens: siteItens,
   }
 ]
 

@@ -1,5 +1,5 @@
 import { LayoutModule } from './layout/layout.module';
-import { AngularMaterialModule } from './angular-material.module';
+import { AngularMaterialModule } from './material/angular-material.module';
 import { AuthInterceptor } from './auth/auth-interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

@@ -35,7 +35,7 @@ export class SubscriptionService {
       const fakeSubs = new Array<Subscription>(qtd).fill({
         channel: {
           name: "fake channel",
-          icon: "fake_icon",
+          icon: null,
           countSubs: 99,
           id: '1'
         },

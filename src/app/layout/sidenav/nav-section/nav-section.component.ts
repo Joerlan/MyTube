@@ -37,7 +37,7 @@ export class NavSectionComponent implements OnInit {
 
     this.showLessItem = {
       name: "Show less",
-      iconName: "arrow_up",
+      iconName: "arrow-up",
       hasSimpleDisplay: false,
       route: "#"
     }
@@ -56,9 +56,9 @@ export class NavSectionComponent implements OnInit {
           this.navItens = [...this.section.fixedItens, ...this.loadedItens];
           this.showMoreItem = {
             name: "Show "+(this.lazyCount-this.section.qtdInitialDisplay)+" more",
-            iconName: "arrow_down",
+            iconName: "arrow-down",
             hasSimpleDisplay: false,
-            route: "#"
+            route: "#",
           }
         });
       }else{

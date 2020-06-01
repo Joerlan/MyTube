@@ -3,4 +3,5 @@ export class NavItem {
   public iconName: string;
   public hasSimpleDisplay: boolean;
   public route: string;
+  public iconURL?: string;
 }

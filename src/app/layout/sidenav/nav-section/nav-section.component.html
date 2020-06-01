@@ -1,4 +1,8 @@
-<app-nav-item [navItem]="item" *ngFor="let item of navItens"></app-nav-item>
+<div class="section" >
 
-<app-nav-item [navItem]="showMoreItem" *ngIf="this.lazyCount-this.loadedItens.length > 0" (click)="onShowMore()"  ></app-nav-item>
-<app-nav-item [navItem]="showLessItem" *ngIf="this.lazyCount-this.loadedItens.length < 0" (click)="onShowLess()" ></app-nav-item>
+  <h3 *ngIf="section.title" class="title">{{section.title}}</h3>
+  <app-nav-item [navItem]="item" *ngFor="let item of navItens"></app-nav-item>
+
+  <app-nav-item [navItem]="showMoreItem" *ngIf="this.lazyCount-this.loadedItens.length > 0" (click)="onShowMore()"  ></app-nav-item>
+  <app-nav-item [navItem]="showLessItem" *ngIf="this.lazyCount-this.loadedItens.length < 0" (click)="onShowLess()" ></app-nav-item>
+</div>

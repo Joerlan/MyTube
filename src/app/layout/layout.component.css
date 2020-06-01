@@ -7,17 +7,11 @@
   transition: transform 0.3s ease;
 }
 
-#content {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
 #sidenav-container {
   position: fixed;
   left: 0;
   top: 56px;
+  width: 240px;
   height: -moz-calc(100% - 56px);
   height: -ms-calc(100% - 56px);
   height: -o-calc(100% - 56px);
@@ -28,6 +22,13 @@
 
 #sidenav-container:hover{
   overflow-y: auto;
+}
+
+#content {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 #main-container {
@@ -42,26 +43,4 @@
 ::-webkit-scrollbar-thumb {
   height: 56px;
   background: hsla(0, 0%, 53.3%, 0.4);
-}
-
-#toolbar-start {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
 }

@@ -1,0 +1,50 @@
+a {
+  width: 100%;
+  display: block;
+  min-height: 40px;
+}
+
+mat-icon {
+  margin-right: 24px;
+  fill: #606060;
+}
+
+.item {
+  padding: 0 24px;
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  font-size: 10px;
+}
+
+.item-label{
+  color: #030303;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-flex: 1 1 1e-9px;
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: 1e-9px;
+  flex-basis: 1e-9px;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 2.1rem;
+}
+
+.dot {
+  height: 24px;
+  width: 24px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.rectangle {
+  height: 14px;
+  width: 130px;
+  background-color: #bbb;
+  display: inline-block;
+}

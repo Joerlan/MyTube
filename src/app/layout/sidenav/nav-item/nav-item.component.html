@@ -1,6 +1,17 @@
-<p *ngIf="navItem" >
-{{navItem.name}}
-</p>
-<p *ngIf="!navItem" >
-  loading
-</p>
+<a>
+  <div class="item" >
+    <mat-icon *ngIf="navItem && navItem.iconName; else loadingIcon"
+    svgIcon="{{navItem.iconName}}"
+    aria-hidden="false"
+    aria-label="Example thumbs up SVG icon" >
+    </mat-icon>
+    <ng-template #loadingIcon>
+      <span class="dot"></span>
+    </ng-template>
+
+    <span class="item-label" *ngIf="navItem; else loadingText" >{{navItem.name}}</span>
+    <ng-template #loadingText>
+      <span class="rectangle"></span>
+    </ng-template>
+  </div>
+</a>

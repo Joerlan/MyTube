@@ -1,5 +1,5 @@
 import { map } from 'rxjs/operators';
-import { SubscriptionService } from '../../subscriptions/subscription.service';
+import { SubscriptionService } from '../../services/subscriptions/subscription.service';
 import { SectionService } from './section-service';
 import { Injectable } from '@angular/core';
 

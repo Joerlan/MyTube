@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { HeaderIconButtonComponent } from './header/header-icon-button/header-icon-button.component';
 import { NavSectionComponent } from './sidenav/nav-section/nav-section.component';
 import { NavItemComponent } from './sidenav/nav-item/nav-item.component';
@@ -14,7 +15,8 @@ import { LogoIconComponent } from './header/logo-icon/logo-icon.component';
   imports: [
     CommonModule,
     AngularMaterialModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   declarations: [
     LayoutComponent,
@@ -23,7 +25,7 @@ import { LogoIconComponent } from './header/logo-icon/logo-icon.component';
     NavItemComponent,
     NavSectionComponent,
     HeaderIconButtonComponent,
-    LogoIconComponent
+    LogoIconComponent,
   ],
   exports: [
     LayoutComponent

@@ -1,3 +1,4 @@
+import { ViewsModule } from './views/views.module';
 import { LayoutModule } from './layout/layout.module';
 import { AngularMaterialModule } from './material/angular-material.module';
 import { AuthInterceptor } from './auth/auth-interceptor';
@@ -22,7 +23,8 @@ import { PostModule } from './posts/post.module';
     AngularMaterialModule,
     HttpClientModule,
     PostModule,
-    LayoutModule
+    LayoutModule,
+    ViewsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]

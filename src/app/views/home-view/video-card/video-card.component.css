@@ -1,0 +1,19 @@
+:host {
+  margin-left: calc(var(--grid-item-margin) / 2);
+  margin-right: calc(var(--grid-item-margin) / 2);
+  margin-bottom: 40px;
+  width: calc( 100% / var(--grid-items-per-row) - var(--grid-item-margin) - .01px );
+}
+
+.card {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: teal;
+  max-width: var(--grid-item-max-width);
+  min-width: var(--grid-item-min-width);
+  min-height: 10px;
+}

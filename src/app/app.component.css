@@ -13,3 +13,11 @@ body {
   right: 0;
   top: 0;
 }
+
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  display: block;
+}

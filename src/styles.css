@@ -1,13 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-size: 10px; font-family: Roboto, Arial, sans-serif; }
+html, body { height: 100%; font-size: 10px; font-family: Roboto, Arial, sans-serif; }
+body { margin: 0; }
 
 html:not(.style-scope)  {
   --grid-item-margin: 16px;
   --grid-item-min-width: 320px;
   --grid-item-max-width: 360px;
   --grid-items-per-row: 4;
+  --channel-name-text_-_font-size: 14px;
+  --channel-name-text_-_font-weight: 400;
+  --channel-name-text_-_line-height: 18px;
 }
 
 div {

@@ -1,3 +1,29 @@
-<div id="content" class="card">
-
+<div id="content" >
+  <div id="thumbnail">
+    <a >
+      <app-video-img></app-video-img>
+    </a>
+  </div>
+  <div id="detail">
+    <a id="avatar-link">
+      <img src="video.channel.icon" *ngIf="video.channel.icon; else loadingIcon" >
+      <ng-template #loadingIcon>
+        <span class="dot"></span>
+      </ng-template>
+    </a>
+    <div id="detail-info">
+      <a id="detail-title-link">
+        <span id="detail-title">
+          [NEW WORLD RECORD] Yu-Gi-Oh! Forbidden Memories Speedrun in 1:11:32!
+        </span>
+      </a>
+      <div id="channel-title">
+        <a>Dev Ed</a>
+      </div>
+      <div id="metadata">
+        <span class="nr_views">241K views</span>
+        <span>1 year ago</span>
+      </div>
+    </div>
+  </div>
 </div>
